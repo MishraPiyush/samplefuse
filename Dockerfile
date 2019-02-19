@@ -5,7 +5,7 @@ RUN cat /etc/redhat-release
 RUN whoami
 USER root
 RUN whoami
-RUN echo "8.8.8.8" > /etc/resolv.conf
+RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
 #RUN yum update
 RUN yum -y install wget
 USER jboss
