@@ -12,7 +12,7 @@ RUN bin/karaf server & \
 sleep 10 && \
 bin/client feature:install camel-ftp && \
 bin/client feature:install camel-jackson && \
-bin/client feature:install camel-restlet && 
+bin/client feature:install camel-restlet && \
 sleep 10 && \
 bin/client 'shutdown -f' && \
 sleep 5
