@@ -5,6 +5,8 @@ RUN cat /etc/redhat-release
 RUN whoami
 USER root
 RUN whoami
+RUN echo "8.8.8.8" > /etc/resolv.conf
+RUN yum update -Y
 RUN yum -y install wget
 USER jboss
 RUN whoami
