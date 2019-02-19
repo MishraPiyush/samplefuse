@@ -2,8 +2,8 @@ FROM jboss/base-jdk:8
 MAINTAINER Piyush Mishra
 ENV DEPLOY_LOCAL_STORAGE=install
 RUN cat /etc/redhat-release
-RUN su root
-RUN  sudo yum -y install wget
+RUN whoami
+RUN yum -y install wget
 RUN sleep 5
 ENV DEPLOY_CLOUD_STORAGE=http://www.apache.org/dyn/closer.lua/servicemix/servicemix-6/6.1.4/apache-servicemix-6.1.4.zip
 ENV SERVICEMIX_VERSION=
