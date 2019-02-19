@@ -3,9 +3,9 @@ MAINTAINER Piyush Mishra
 ENV DEPLOY_LOCAL_STORAGE=install
 ENV DEPLOY_CLOUD_STORAGE=http://www.apache.org/dyn/closer.lua/servicemix/servicemix-6/6.1.4/apache-servicemix-6.1.4.zip
 ENV SERVICEMIX_VERSION=
-RUN curl $DEPLOY_CLOUD_STORAGE > /op/servicemix/apache-servicemix-6.1.4.zip
-WORKDIR /opt/servicemix
-RUN unzip apache-servicemix-6.1.4.zip -d /opt/servicemix && rm *.zip
+RUN wget $DEPLOY_CLOUD_STORAGE 
+WORKDIR /opt
+RUN unzip apache-servicemix-6.1.4.zip -d /opt/ && rm *.zip
 RUN ln -s "apache-servicemix-6.1.4" servicemix
 RUN sed -i 's//#admin/admin/' etc/user.properties
 RUN bin/karaf server & \
