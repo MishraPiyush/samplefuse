@@ -1,5 +1,5 @@
 FROM mkroli/servicemix
-COPY ["blueprint.xml", "/opt/servicemix/deploy/ftp-blueprint.xml"]
+COPY ["blueprint.xml", "/deploy/blueprint.xml"]
 WORKDIR /opt/servicemix
 RUN ls
 RUN bin/start
