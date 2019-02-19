@@ -1,7 +1,7 @@
 FROM jboss/base-jdk:8
 MAINTAINER Piyush Mishra
 ENV DEPLOY_LOCAL_STORAGE=install
-RUN cat /etc/redhat-realse
+RUN cat /etc/redhat-release
 RUN su root
 RUN  sudo yum -y install wget
 RUN sleep 5
