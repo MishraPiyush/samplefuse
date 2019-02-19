@@ -6,5 +6,5 @@ RUN bin/start
 #RUN ssh karaf@localhost -p 818
 #RUN /opt/servicemix/bin
 #RUN sleep 20
-RUN bin/client feature:install camel-restlet
+RUN bin/client -r 7 "feature:install camel-restlet";
 RUN sleep 5
