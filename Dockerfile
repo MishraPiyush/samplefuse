@@ -6,7 +6,7 @@ RUN whoami
 USER root
 RUN whoami
 RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
-RUN ip a
+RUN ifconfig
 RUN ping 8.8.8.8 -c 2
 #RUN yum update
 RUN yum -y install wget
