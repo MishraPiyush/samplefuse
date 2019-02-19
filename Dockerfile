@@ -1,15 +1,8 @@
-FROM jboss/base-jdk:8
+FROM jboss/base:latest
 MAINTAINER Piyush Mishra
 ENV DEPLOY_LOCAL_STORAGE=install
-RUN cat /etc/redhat-release
-RUN whoami
 USER root
-RUN whoami
-RUN echo "nameserver 8.8.8.8" > /etc/resolv.conf
-RUN ipaddr=$(hostname -I)
-RUN ping 8.8.8.8 -c 2
-#RUN yum update
-RUN yum -y install wget
+RUN yum -y install java-1.8.0-openjdk-devel && yum clean all
 USER jboss
 RUN whoami
 RUN sleep 5
