@@ -14,7 +14,7 @@
     <route id="sampleservice">
          <from uri="restlet:http://0.0.0.0:9091/api/getName?restletMethod=POST"/>
          <unmarshal ref="jsonOrder"/>
-         <setBody><simple>{"name":" 6E API*******==> is ${body[name]}"}</simple></setBody>
+         <setBody><simple>{"name":" 6E-Indigo API*******==> is ${body[name]}"}</simple></setBody>
      </route>
   </camelContext>
 
